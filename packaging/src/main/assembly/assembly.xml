@@ -1,0 +1,36 @@
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.1"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.1 http://maven.apache.org/xsd/assembly-1.1.1.xsd">
+    <id>bin</id>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <formats>
+        <format>dir</format>
+        <format>zip</format>
+    </formats>
+
+    <files>
+        <file>
+            <source>../apisix-plugin-core/target/apisix-plugin-core-jar-with-dependencies.jar</source>
+            <destName>apisix-plugin-core.jar</destName>
+        </file>
+        <file>
+            <source>../apisix-plugin-agent/target/apisix-plugin-agent-jar-with-dependencies.jar</source>
+            <destName>apisix-plugin-agent.jar</destName>
+        </file>
+        <file>
+            <source>../apisix-plugin-watcher/target/apisix-plugin-watcher-jar-with-dependencies.jar</source>
+            <destName>apisix-plugin-watcher.jar</destName>
+        </file>
+        <file>
+            <source>../apisix-plugin-server/target/apisix-plugin-server-jar-with-dependencies.jar</source>
+            <destName>apisix-plugin-server.jar</destName>
+        </file>
+
+        <file>
+            <source>../bin/boot.sh</source>
+            <fileMode>0755</fileMode>
+            <filtered>true</filtered>
+        </file>
+    </files>
+
+</assembly>
