@@ -78,7 +78,7 @@ mvn --settings=${maven_settings} clean package -Dmaven.test.skip=true -P full
 1. watcher 监听本地文件变更（.class & .java）并缓存变更文件路径
 2. 将变更文件上传到 server 并保存在临时目录（本地模式忽略次步骤）
 3. 通过 javaagent 技术 attach 到 jvm 进程，拿到`Instrumentation`对象
-4. 使用自定义类加载器（与业务代码隔离）加载 `apisix-plugin-agent-core` 编译 java 文件（如有）
+4. 使用自定义类加载器（与业务代码隔离）加载 `apisix-plugin-core` 编译 java 文件（如有）
 5. 读取 class 文件字节码，通过`instrumentation.redefineClasses()`方法重新定义并加载 class
 
 
