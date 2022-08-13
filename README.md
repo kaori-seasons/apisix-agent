@@ -1,6 +1,6 @@
 # apisix-plugin-agent
 
-本项目的主旨在于解决[apisix运行时打包](https://issues.apache.org/jira/browse/COMDEV-451)  方便进行开发,支持热更新打包，为ApiSix的每个插件使用隔离的classloader，并实现代码更新
+本项目的主旨在于解决[apisix插件运行时打包](https://issues.apache.org/jira/browse/COMDEV-451)  方便进行开发,支持热更新打包，为ApiSix的每个插件使用隔离的classloader，并实现代码更新
 
 
 ## 功能模块
